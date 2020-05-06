@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWIChallenge", "SWIChallenge\SWIChallenge.csproj", "{0043950A-8FC5-4758-A9CD-4C02C7E1C00E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWIChallengeTests", "SWIChallengeTests\SWIChallengeTests.csproj", "{BEE7027C-6134-48CA-B7CD-7A81FAF8A53F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0043950A-8FC5-4758-A9CD-4C02C7E1C00E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0043950A-8FC5-4758-A9CD-4C02C7E1C00E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0043950A-8FC5-4758-A9CD-4C02C7E1C00E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0043950A-8FC5-4758-A9CD-4C02C7E1C00E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE7027C-6134-48CA-B7CD-7A81FAF8A53F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE7027C-6134-48CA-B7CD-7A81FAF8A53F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE7027C-6134-48CA-B7CD-7A81FAF8A53F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE7027C-6134-48CA-B7CD-7A81FAF8A53F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CCFE3CF-8423-43F8-9155-8BCC0DDAF651}
+	EndGlobalSection
+EndGlobal

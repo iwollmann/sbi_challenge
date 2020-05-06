@@ -1,0 +1,47 @@
+﻿<Window x:Class="SWIChallenge.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SWIChallenge"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Normal"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Swabian Instruments Challenge" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Orientation="Vertical" >
+            <StackPanel Margin="0 10 0 0" Orientation="Horizontal" >
+                <TextBox Name="tbFileName" Text="File Name" HorizontalContentAlignment="Center"  IsEnabled="False" Height="25" Width="90" Margin="10 0 0 0"/>
+                <Button x:Name="btnDialog" Content="Browse" HorizontalContentAlignment="Center" Height="25" Width="auto" Margin="16 0 5 0" Click="Button_Click"/>
+            </StackPanel>
+            <StackPanel x:Name="panelCommands" Orientation="Vertical">
+                <Button Content="LinearPredict" HorizontalAlignment="Stretch" Height="25" Margin="5 10 5 5" Click="Linear_Predict" />
+                <TextBlock x:Name="LinearCoefficient" HorizontalAlignment="Center" FontWeight="UltraLight" ></TextBlock>
+                <Button Content="ExponentialPredict" HorizontalAlignment="Stretch" Height="25" Margin="5 10 5 5" Click="Exponential_Predict" />
+                <TextBlock x:Name="ExponentialCoefficient" HorizontalAlignment="Center" FontWeight="UltraLight"></TextBlock>
+                <Button Content="PowerFcPredict" HorizontalAlignment="Stretch" Height="25" Margin="5 10 5 5" Click="PowerFc_Predict" />
+                <TextBlock x:Name="PowerFcCoefficient" HorizontalAlignment="Center" FontWeight="UltraLight"></TextBlock>
+                <CheckBox x:Name="showInvalid" IsChecked="True" Unchecked="showInvalid_Checked" Checked="showInvalid_Checked">Show Invalid Points</CheckBox>
+
+                <Button Content="Clear All" HorizontalAlignment="Stretch" Height="25"  Margin="5 160 5 5" Click="Clear_All" />
+            </StackPanel>
+        </StackPanel>
+        <Grid Name="spChart" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <oxy:PlotView Margin="0,0,0,0" x:Name="pvMainChart"></oxy:PlotView>
+        </Grid>
+    </Grid>
+</Window>
