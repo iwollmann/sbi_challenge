@@ -73,6 +73,9 @@ namespace SWIChallenge
                         var series = new ScatterSeries
                         {
                             Title = "Points",
+                            MarkerType = MarkerType.Cross, //better performance, less to render
+                            MarkerStrokeThickness = 0.5,
+                            MarkerStroke = OxyColors.DarkOliveGreen
                         };
 
                         series.Points.AddRange(_PredictModel.ValidPoints.ToScatterPoints());
@@ -201,7 +204,9 @@ namespace SWIChallenge
                         invalidSeries = new ScatterSeries
                         {
                             Title = "Invalid Points",
-                            MarkerFill = OxyColors.Red
+                            MarkerType = MarkerType.Cross, //better performance, less to render
+                            MarkerStrokeThickness = 0.5,
+                            MarkerStroke = OxyColors.Red,
                         };
 
                         invalidSeries.Points.AddRange(_PredictModel.InvalidPoints.ToScatterPoints());
@@ -227,8 +232,9 @@ namespace SWIChallenge
             {
                 var lineSeries = new LineSeries()
                 {
-                    Title = seriesTitle
-                };
+                    Title = seriesTitle,
+                    Decimator = Decimator.Decimate
+            };
 
                 lineSeries.InterpolationAlgorithm = InterpolationAlgorithms.CanonicalSpline;
                 lineSeries.Points.AddRange(points);
